@@ -70,14 +70,16 @@ export function Service() {
     </div>
    
       </div>
-      <div className="flex items-center justify-center mt-8">
-       
-        <Button className="w-3/12 mb-10   p-10 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600" onClick={handleClick}>
-          <span className="text-2xl font-mono mr-3">Continue</span>
-          <FaArrowRightLong />
-        </Button>
-    
-      </div>
+     <div className="flex items-center justify-center mt-8">
+  <Button
+    className="w-full sm:w-8/12 md:w-6/12 lg:w-3/12 p-4 sm:p-6 lg:p-10 mb-10 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600"
+    onClick={handleClick}
+  >
+    <span className="text-lg sm:text-xl lg:text-2xl font-mono mr-3">Continue</span>
+    <FaArrowRightLong />
+  </Button>
+</div>
+
     </div>
    
   )

@@ -29,7 +29,7 @@ const Profile = () => {
   <div className="w-full mt-5">
     <Link to={"/support"} className="w-full">
       <button className="w-full p-4 rounded-xl flex items-center justify-between bg-[#272727] border border-gray-400">
-        <span className="w-12 h-12 bg-[#fecc00] rounded flex items-center justify-center">
+        <span className="w-12 h-12 bg-[#fecc00] rounded-2xl flex items-center justify-center shadow-[0px_4px_10px_2px_rgba(254,204,0,0.5)]">
           <MdSupportAgent size={42} />
         </span>
         <span>Support</span>
