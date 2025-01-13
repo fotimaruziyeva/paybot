@@ -24,7 +24,7 @@ const Check = () => {
   }, [counter]);
 
   return (
-    <div className="w-full min-h-screen bg-[#272727] text-white">
+    <div className="w-full min-h-screen bg-[#272727] text-white px-3">
       <Navbar />
       <h1 className="text-3xl text-white text-center mb-4">Confirmation Code</h1>
       <div className="max-w-xl mx-auto bg-[#3D3D3D] p-10 flex flex-col items-center justify-center gap-9 rounded-2xl mt-16">

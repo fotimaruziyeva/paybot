@@ -53,9 +53,9 @@ const PaymentClick = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#272727] text-white">
+    <div className="w-full min-h-screen bg-[#272727] text-white ">
     <Navbar />
-    <div className="flex items-center justify-center flex-col mt-28 px-8"> {/* Added horizontal padding */}
+    <div className="flex items-center justify-center flex-col mt-28 px-8"> 
       <h1 className="max-w-md mx-auto mt-5 mb-2 text-4xl text-white"> 
         Payment informations
       </h1>

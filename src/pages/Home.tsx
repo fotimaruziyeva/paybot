@@ -9,7 +9,7 @@ import { BiSearch } from "react-icons/bi";
 
 const Home = () => {
   return (
-    <div className="w-full h-full bg-[#272727] text-white flex flex-col items-center px-20">
+    <div className="w-full h-full bg-[#272727] text-white flex flex-col items-center px-3">
   {/* Navbar */}
   <nav className="text-white w-full flex justify-between items-center py-4">
     <div className="flex items-center">
