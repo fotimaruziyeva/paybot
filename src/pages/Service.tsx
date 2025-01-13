@@ -1,86 +1,100 @@
-"use client"
+'use client'
 import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import Navbar from "./navbar"
-import { TbCube } from "react-icons/tb";
+	Drawer,
+	DrawerContent,
+	DrawerHeader,
+	DrawerTitle,
+	DrawerTrigger,
+} from '@/components/ui/drawer'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import Navbar from './navbar'
+import { TbCube } from 'react-icons/tb'
 
-import { GoChevronDown } from "react-icons/go";
-import { serviceList } from "@/constants"
-import { Button } from "@/components/ui/button"
-import { FaArrowRightLong } from "react-icons/fa6"
-import { useNavigate } from "react-router-dom"
-
+import { GoChevronDown } from 'react-icons/go'
+import { serviceList } from '@/constants'
+import { Button } from '@/components/ui/button'
+import { FaArrowRightLong } from 'react-icons/fa6'
+import { useNavigate } from 'react-router-dom'
+import backImage from '../../public/images/pubg-image.png'
 
 export function Service() {
-  const navigate = useNavigate();
+	const navigate = useNavigate()
 
-  const handleClick = () => {
-    navigate("/payment");
-  };
-  return (
-    <div className="w-full  mx-auto bg-[#272727] text-white min-h-screen">
-      <Navbar/>
-      <div className="w-full flex flex-col gap-4 max-w-xl mx-auto p-10 bg-[#3D3D3D] rounded-xl shadow-lg ">
-        <Label>Packages </Label>
-        <Drawer>
-      <DrawerTrigger asChild>
-      <div className="relative">
-  <Input type="button" value="Service" className="pl-6 " />
-  <GoChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2" />
-</div>
-
-      </DrawerTrigger>
-      <DrawerContent className=" bg-[#272727] text-white">
-        <div className="mx-auto max-w-xl ">
-          <DrawerHeader>
-            <DrawerTitle>Service List </DrawerTitle>
-            <DrawerDescription>Choose your service and adjust the goal.</DrawerDescription>
-          </DrawerHeader>
-          <div className="p-4 pb-0">
-      
-            {/* Service List */}
-            <div className="mt-3">
-              <div className="grid grid-cols-2 gap-4 ">
-                {serviceList.map((service) => (
-                  <div
-                    key={service.id}
-                    className="flex justify-center cursor-pointer items-center flex-col border p-8 rounded-lg shadow-lg bg-[#3D3D3D] text-white"
-                  >
-                    <span className="w-12 h-12 bg-[#fecc00] rounded-full flex items-center justify-center"><TbCube/></span>
-                    <span>{service.price} - {service.amount}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </DrawerContent>
-    </Drawer> 
-    <div>
-      <Label>User id</Label>
-      <Input className="p-6"></Input>
-    </div>
-   
-      </div>
-     <div className="flex items-center justify-center mt-8">
-  <Button
-    className="w-full sm:w-8/12 md:w-6/12 lg:w-3/12 p-4 sm:p-6 lg:p-10 mb-10 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600"
-    onClick={handleClick}
-  >
-    <span className="text-lg sm:text-xl lg:text-2xl font-mono mr-3">Continue</span>
-    <FaArrowRightLong />
-  </Button>
-</div>
-
-    </div>
-   
-  )
+	const handleClick = () => {
+		navigate('/payment')
+	}
+	return (
+		<div className='w-full  mx-auto text-white min-h-screen relative'>
+			<div className='bg-gradient-to-t from-[#000000] via-[#1e1e1ef0] to-[#272727d1] sm:px-10 p-3 h-screen'>
+				<Navbar langs={false} />
+				<div className='flex flex-col gap-2 items-center'>
+					<h1 className='text-2xl my-3 text-left w-full'>Service</h1>
+					<div className='w-full flex flex-col gap-2 max-w-xl mx-auto p-5 bg-[#3D3D3D] rounded-xl shadow-lg border border-solid border-[#fafafa50]'>
+						<Label>Packages </Label>
+						<Drawer>
+							<DrawerTrigger asChild>
+								<div className='relative'>
+									<Input
+										type='button'
+										value='Service'
+										className='pl-6 bg-[#272727] border-none mt-0'
+									/>
+									<GoChevronDown className='absolute right-2 top-1/2 transform -translate-y-1/2' />
+								</div>
+							</DrawerTrigger>
+							<DrawerContent className=' bg-[#272727] text-white'>
+								<div className='mx-auto max-w-xl '>
+									<DrawerHeader>
+										<DrawerTitle className='text-left'>
+											Service List{' '}
+										</DrawerTitle>
+									</DrawerHeader>
+									<div className='p-4 pb-0'>
+										{/* Service List */}
+										<div className='mt-3'>
+											<div className='grid grid-cols-2 gap-4 '>
+												{serviceList.map(service => (
+													<div
+														key={service.id}
+														className='flex gap-3 justify-center cursor-pointer items-center flex-col border py-4 px-3 rounded-lg shadow-lg bg-[#3D3D3D] text-white'
+													>
+														<span className='w-12 h-12 bg-[#fecc00] rounded-full flex items-center justify-center shadow-[0px_4px_10px_2px_rgba(254,204,0,0.5)]'>
+															<TbCube className='text-2xl' />
+														</span>
+														<span className='text-sm'>
+															{service.price} - {service.amount}
+														</span>
+													</div>
+												))}
+											</div>
+										</div>
+									</div>
+								</div>
+							</DrawerContent>
+						</Drawer>
+						<div className='flex flex-col gap-2 mt-2'>
+							<Label>User id</Label>
+							<Input
+								className='px-3 py-2 bg-[#272727] border-none'
+								placeholder='000000000'
+							></Input>
+						</div>
+					</div>
+					<div className='flex items-center justify-center mt-8 max-w-xl w-full'>
+						<Button
+							className='p-4 sm:p-6  mb-10 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600  text-base w-full'
+							onClick={handleClick}
+						>
+							Continue
+							<FaArrowRightLong size={16} />
+						</Button>
+					</div>
+				</div>
+			</div>
+			<div className='absolute top-0 left-0 -z-10 w-screen h-screen'>
+				<img src={backImage} alt='back_image' className='w-full h-full' />
+			</div>
+		</div>
+	)
 }
