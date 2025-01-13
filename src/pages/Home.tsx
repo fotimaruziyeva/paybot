@@ -9,7 +9,7 @@ import { BiSearch } from "react-icons/bi";
 
 const Home = () => {
   return (
-    <div className="w-full h-full bg-[#272727] text-white flex flex-col items-center px-10">
+    <div className="w-full h-full bg-[#272727] text-white flex flex-col items-center px-20">
   {/* Navbar */}
   <nav className="text-white w-full flex justify-between items-center py-4">
     <div className="flex items-center">
@@ -23,7 +23,7 @@ const Home = () => {
   </nav>
 
   {/* Hero Section */}
-  <div className="container mx-auto w-full flex items-center justify-center relative mt-5">
+  <div className="  w-full flex items-center justify-center relative mt-5">
     <img
       src="/images/pubg1.jpeg"
       alt="PUBG"
@@ -52,12 +52,12 @@ const Home = () => {
   <br />
 
   {/* Search and Games Section */}
-  <div className="container mx-auto flex flex-col items-center bg-[#3D3D3D] px-10 py-8 space-y-8 rounded-lg">
+  <div className=" w-full  flex flex-col items-center bg-[#3D3D3D] px-10 py-8 space-y-8 rounded-lg">
     {/* Search Input */}
-    <div className="w-full flex mt-10 items-center relative">
+    <div className="w-11/12 flex mt-10 items-center relative">
       <Input
         type="text"
-        className="p-4 sm:p-6 bg-[#272727] border-none rounded-lg w-full"
+        className="p-3 sm:p-8 bg-[#272727] border-none rounded-lg w-full"
       />
       <BiSearch className="absolute right-4 sm:right-6 text-white" size={30} />
     </div>

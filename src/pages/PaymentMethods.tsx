@@ -13,7 +13,7 @@ const PaymentMethods = () => {
    navigate("/click");
  }
   return (
-    <div className="w-full bg-[#272727] mx-auto  text-white min-h-screen">
+    <div className="w-full bg-[#272727] mx-auto  text-white min-h-screen px-20  ">
       <Navbar/>
 
       <div className="max-w- p-8 bg-[#3D3D3D] rounded-2xl mx-auto shadow-lg">
