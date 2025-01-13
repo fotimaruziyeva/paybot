@@ -17,8 +17,8 @@ const Navbar = () => {
       <SelectTrigger className="w-[80px]">
         <SelectValue placeholder="En" />
       </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
+      <SelectContent className='bg-[#272727]'>
+        <SelectGroup className='text-white'>
           <SelectItem value="ru">RU</SelectItem>
           <SelectItem value="en">EN</SelectItem>
           <SelectItem value="uz">UZ</SelectItem>

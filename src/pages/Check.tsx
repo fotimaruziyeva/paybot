@@ -24,10 +24,10 @@ const Check = () => {
   }, [counter]);
 
   return (
-    <div className="w-full min-h-screen bg-gray-900 text-white">
+    <div className="w-full min-h-screen bg-[#272727] text-white">
       <Navbar />
-      <h1 className="text-2xl text-white text-center mb-4">Confirmation Code</h1>
-      <div className="max-w-xl mx-auto border p-8 flex flex-col items-center justify-center gap-9 rounded mt-16">
+      <h1 className="text-3xl text-white text-center mb-4">Confirmation Code</h1>
+      <div className="max-w-xl mx-auto bg-[#3D3D3D] p-10 flex flex-col items-center justify-center gap-9 rounded-2xl mt-16">
         <p>Confirmation code has been sent to your number: 00:{counter < 10 ? `0${counter}` : counter}</p>
         <InputOTP maxLength={4} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>
           <InputOTPGroup className="space-x-4">
@@ -37,14 +37,18 @@ const Check = () => {
             <InputOTPSlot className="w-16 h-16 text-3xl text-center border border-gray-600 rounded-lg" index={3} />
           </InputOTPGroup>
         </InputOTP>
-        <Button 
+       
+      </div>
+      <div className="flex items-center justify-center mt-10 w-full ">
+      <Button 
           onClick={handleClick} 
-          className="pt-8 p-6 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600"
+          className="pt-8 p-8  w-3/12 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600"
         >
           <span className="text-2xl font-mono mr-3 text-center">Resend Code</span>
           <RxReset />
         </Button>
       </div>
+      
     </div>
   );
 };

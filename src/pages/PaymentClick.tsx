@@ -17,10 +17,20 @@ const PaymentClick = () => {
   const [date, setDate] = useState<Date | null>(null);
   const [cardNumber, setCardNumber] = useState("");
   const { toast } = useToast();
-  const navigate = useNavigate(); // To‘g‘ri olingan `useNavigate`
+  const navigate = useNavigate();
+
+  const handleCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, ""); 
+    if (value.length > 16) return; 
+    const formattedValue = value
+      .replace(/(.{4})/g, "$1 ") 
+      .trim(); 
+    setCardNumber(formattedValue);
+  };
 
   const handleContinue = () => {
-    if (!cardNumber.match(/^\d{16}$/)) {
+    const cleanCardNumber = cardNumber.replace(/\s/g, ""); 
+    if (cleanCardNumber.length !== 16) {
       toast({
         title: "Xatolik",
         description: "Karta raqami 16 xonali bo‘lishi kerak.",
@@ -38,65 +48,71 @@ const PaymentClick = () => {
     }
 
     setTimeout(() => {
-      navigate("/"); 
-    }, 1500); 
+      navigate("/check");
+    }, 1500);
   };
 
   return (
-    <div className="w-full min-h-screen  bg-gray-900 text-white">
-      <Navbar />
-      <div className="flex items-center justify-center flex-col mt-28">
-        <h1 className="max-w-md mx-auto mt-5 mb-2 text-2xl text-yellow-400">
-          Payment informations
-        </h1>
-        <div className="w-full max-w-xl mx-auto p-6 bg-gray-800 rounded-xl shadow-lg">
-          <div className="mb-6">
-            <Label className="text-yellow-400">Card Number</Label>
-            <Input
-              type="tel"
-              placeholder="0000 0000 0000 0000"
-              pattern="[0-9]{16}"
-              className="w-full p-5 bg-gray-700 text-white border border-gray-600 rounded-lg"
-              required
-              value={cardNumber}
-              onChange={(e) => setCardNumber(e.target.value)}
-            />
-          </div>
-          <div className="mb-6">
-            <Label className="text-yellow-400">Expiration Date:</Label>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant={"secondary"}
-                  className={cn(
-                    "w-full justify-start text-left font-normal p-5",
-                    !date && "text-muted-foreground"
-                  )}
-                >
-                  <CalendarIcon />
-                  {date ? format(date, "PPP") : <span>mm-yyyy</span>}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent
-                align="start"
-                className="flex w-auto flex-col space-y-2 p-2"
-              >
-                <div className="rounded-md border">
-                  <Calendar mode="single" selected={date} onSelect={setDate} />
-                </div>
-              </PopoverContent>
-            </Popover>
-          </div>
-          <Button
-            className="w-full p-6 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600"
-            onClick={handleContinue}
-          >
-            <span className="text-2xl font-mono mr-3 text-center">Continue</span>
-            <FaArrowRightLong />
-          </Button>
+    <div className="w-full min-h-screen bg-[#272727] text-white">
+    <Navbar />
+    <div className="flex items-center justify-center flex-col mt-28 px-8"> {/* Added horizontal padding */}
+      <h1 className="max-w-md mx-auto mt-5 mb-2 text-4xl text-white"> 
+        Payment informations
+      </h1>
+      <div className="w-full max-w-4xl mx-auto p-16 bg-[#3D3D3D] rounded-xl shadow-lg">
+        <div className="mb-6">
+          <Label className="text-white text-2xl mb-3"> 
+            Card Number
+          </Label>
+          <Input
+            type="tel"
+            placeholder="0000 0000 0000 0000"
+            className="w-full p-6 bg-[#272727] border-none text-3xl hover:bg-gray-950 cursor-pointer text-white border border-gray-600 rounded-lg"
+            required
+            value={cardNumber}
+            onChange={handleCardNumberChange}
+          />
         </div>
+        <div className="mb-6">
+          <Label className="text-white text-2xl mb-3"> 
+            Expiration Date:
+          </Label>
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button
+                className={cn(
+                  "w-full bg-[#272727] border-none justify-start text-left font-normal p-6",
+                  !date && "text-muted-foreground"
+                )}
+              >
+                <CalendarIcon />
+                {date ? format(date, "PPP") : <span>mm-yyyy</span>}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent
+              align="start"
+              className="flex w-auto flex-col space-y-2 p-2 bg-[#272727] text-white" 
+            >
+              <div className="rounded-md border">
+                <Calendar mode="single" selected={date} onSelect={setDate} />
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
+        <Button
+          className="w-full p-8 bg-gradient-to-r from-yellow-400 to-pink-500 text-white rounded-lg shadow-xl hover:bg-pink-600"
+          onClick={handleContinue}
+        >
+          <span className="text-2xl font-mono mr-3 text-center"> 
+            Continue
+          </span>
+          <FaArrowRightLong />
+        </Button>
       </div>
     </div>
+  </div>
+  
+  
   );
 };
 

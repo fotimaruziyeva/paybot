@@ -1,42 +1,42 @@
 export const Card=[
     {
         id:1,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
     {
         id:2,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
     {
         id:3,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
     {
         id:4,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
     {
         id:5,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
     {
         id:6,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
     {
         id:4,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
     {
         id:5,
-        image:'/images/2.png',
+        image:'/images/conquer.png',
         title:'Steam'
     },
 
@@ -44,34 +44,35 @@ export const Card=[
 export const payment=[
     {
         id:1,
-        image:'/images/payment.png',
+        image:'/images/upay.png',
         title:'UPAY'
     },
     {
         id:2,
-        image:'/images/payway.png',
+        image:'/images/image.png',
         title:'PAY WAY'
     },
     {
         id:3,
-        image:'/images/uzum.png',
+        image:'/images/uzum1.png',
         title:'UZUM BANK'
     },
     {
         id:4,
-        image:'/images/humans.png',
+        image:'/images/image 29.png',
         title:'HUMANS'
     },
     {
         id:5,
-        image:'/images/plum.png',
+        image:'/images/image 30.png',
         title:'PLUM'
     },
     {
         id:6,
-        image:'/images/karta.png',
+        image:'/images/card.png',
         title:'Karta orqali to’lash   '
-    }
+    },
+    
 
 ]
 export const serviceList = [
@@ -81,7 +82,4 @@ export const serviceList = [
     { id: 4, price: "48500 UZ", amount: "5 000 000" },
     { id: 5, price: "48500 UZ", amount: "5 000 000" },
     { id: 6, price: "48500 UZ", amount: "5 000 000" },
-    { id: 7, price: "48500 UZ", amount: "5 000 000" },
-    { id: 8, price: "48500 UZ", amount: "5 000 000" },
-    { id: 9, price: "48500 UZ", amount: "5 000 000" }
   ];
