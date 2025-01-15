@@ -7,6 +7,7 @@ import PaymentClick from "./pages/PaymentClick"
 import { Toaster } from "./components/ui/toaster"
 import Check from "./pages/Check"
 import { Service } from "./pages/Service"
+import SucessPage from "./pages/SucessPage"
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
   <Route path="/service" element={<Service/>}></Route>
   <Route path="/click" element={<PaymentClick/>}></Route>
   <Route path="/check" element={<Check/>}></Route>
+  <Route path="/check/:id" element={<SucessPage />} />
 </Routes>
 
     </div>

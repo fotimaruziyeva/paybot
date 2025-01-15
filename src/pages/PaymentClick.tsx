@@ -58,7 +58,7 @@ const PaymentClick = () => {
 	return (
 		<div className='w-full  mx-auto text-white min-h-screen relative'>
 			<div className='w-full min-h-screen bg-gradient-to-t from-[#000000] via-[#1e1e1ef0] to-[#272727d1] text-white sm:p-10 p-3'>
-				<Navbar langs={true} />
+				<Navbar langs={true} type='back' />
 				<div className='flex items-center justify-center flex-col gap-2'>
 					<h1 className='mx-auto mt-5 mb-2 sm:text-2xl text-2xl text-left w-full text-white'>
 						Payment informations

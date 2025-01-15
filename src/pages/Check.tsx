@@ -30,7 +30,7 @@ const Check = () => {
 	return (
 		<div className='w-full  mx-auto text-white min-h-screen relative'>
 			<div className='w-full min-h-screen bg-gradient-to-t from-[#000000] via-[#1e1e1ef0] to-[#272727d1] text-white px-3'>
-				<Navbar langs={true} />
+				<Navbar langs={true} type='back' />
 				<h1 className='text-xl text-white  text-left w-full mt-3'>
 					Confirmation Code
 				</h1>

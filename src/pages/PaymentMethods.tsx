@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button'
-import { payment } from '@/constants'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { IoLogoGameControllerB } from 'react-icons/io'
 import { IoCashOutline, IoPerson } from 'react-icons/io5'
@@ -16,37 +15,11 @@ const PaymentMethods = () => {
 	return (
 		<div className='w-full  mx-auto text-white min-h-screen relative'>
 			<div className='w-full bg-gradient-to-t from-[#000000] via-[#1e1e1ef0] to-[#272727d1] mx-auto  text-white min-h-screen px-3 '>
-				<Navbar langs={false} />
+				<Navbar langs={false} type='support' />
 
-				<div className='p-4 bg-[#3D3D3D] rounded-2xl mx-auto shadow-lg'>
-					<h1 className='text-2xl font-bold text-white'>Payment methods</h1>
-					<div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6'>
-						{payment.map(card => (
-							<div
-								className={
-									'p-[1px] from-yellow-400 via-orange-400 to-pink-600 rounded-xl hover:bg-gradient-to-br hover:scale-105  transition-all duration-300'
-								}
-							>
-								<div
-									className='bg-[#272727] rounded-xl shadow-lg p-3 text-center '
-									key={card.id}
-								>
-									<img
-										src={card.image}
-										alt=''
-										className='mx-auto mb-4 w-30 h-10'
-									/>
-									<span className='text-white font-semibold text-sm'>
-										{card.title}
-									</span>
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-
-				<div className='p-3 mt-8 rounded-2xl bg-[#3D3D3D] shadow-lg mx-auto flex flex-col gap-3'>
-					<h1 className='text-xl font-bold text-white'>Transaction Info</h1>
+				<h1 className='text-xl  text-center font-bold text-white'>Transaction Info</h1>
+				<div className='p-3 mt-10 rounded-2xl bg-[#3D3D3D] shadow-lg mx-auto flex flex-col gap-3'>
+					
 					<div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
 						{/* O'yin */}
 						<div className='flex items-center justify-between bg-[#272727]   border border-gray-600 rounded-lg p-2'>
