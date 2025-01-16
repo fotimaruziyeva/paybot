@@ -27,7 +27,7 @@ const items = [
     />
     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#00000075] via-[#00000045] to-[#00000000] flex flex-col justify-end gap-3 sm:px-10 sm:pb-10 p-5">
       <h1 className="sm:text-7xl text-xl font-semibold ">PUBG mobile</h1>
-      <p className="text-sm ">o'yini uchun to'lovni amalga oshiring</p>
+      <p className="text-sm mb-5">o'yini uchun to'lovni amalga oshiring</p>
     </div>
   </div>,
   <div className="relative w-full sm:h-[650px] h-72 overflow-hidden">
@@ -40,7 +40,7 @@ const items = [
     />
     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#00000075] via-[#00000045] to-[#00000000] flex flex-col justify-end gap-3 sm:px-10 sm:pb-10 p-5">
       <h1 className="sm:text-7xl text-xl font-semibold ">PUBG mobile</h1>
-      <p className="text-sm ">o'yini uchun to'lovni amalga oshiring</p>
+      <p className="text-sm mb-5">o'yini uchun to'lovni amalga oshiring</p>
     </div>
   </div>,
   <div className="relative w-full sm:h-[650px] h-72 overflow-hidden">
@@ -53,7 +53,7 @@ const items = [
     />
     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#00000075] via-[#00000045] to-[#00000000] flex flex-col justify-end gap-3 sm:px-10 sm:pb-10 p-5">
       <h1 className="sm:text-7xl text-xl font-semibold ">PUBG mobile</h1>
-      <p className="text-sm ">o'yini uchun to'lovni amalga oshiring</p>
+      <p className="text-sm mb-5">o'yini uchun to'lovni amalga oshiring</p>
     </div>
   </div>,
 ];
