@@ -43,41 +43,40 @@ export function Service() {
                   <GoChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2" />
                 </div>
               </DrawerTrigger>
-              <DrawerContent className=" bg-[#272727] text-white overflow-y-auto ">
-                <div className=" ">
-                  <DrawerHeader>
-                    <DrawerTitle className="text-left">
-                      Service List{" "}
-                    </DrawerTitle>
-                  </DrawerHeader>
-                  <div className="p-4 pb-0 ">
-                    {/* Service List */}
-                    <div className="mt-3" >
-                      <div className="grid grid-cols-2 gap-4 ">
-                        {serviceList.map((service) => (
-                          <div
-                            key={service.id}
-                            className="flex gap-3 justify-center cursor-pointer items-center flex-col border py-4 px-3 rounded-lg shadow-lg bg-[#3D3D3D] text-white"
-                          >
-                            <span className="w-12 h-12 bg-[#fecc00] rounded-full flex items-center justify-center shadow-[0px_4px_10px_2px_rgba(254,204,0,0.5)]">
-                              <TbCube className="text-2xl" />
-                            </span>
-                            <span className="text-sm">
-                              {service.price} - {service.amount}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </DrawerContent>
+              <DrawerContent className="bg-[#272727] text-white">
+        <div className="h-full">
+       <DrawerHeader>
+        <DrawerTitle className="text-left">Service List</DrawerTitle>
+       </DrawerHeader>
+       <div className="p-10 pb-0 h-[calc(100vh-100px)] overflow-y-auto">
+      {/* Service List */}
+      <div className="mt-3">
+        <div className="grid grid-cols-2 gap-4">
+          {serviceList.map((service) => (
+            <div
+              key={service.id}
+              className="flex gap-3 justify-center cursor-pointer items-center flex-col border py-4 px-3 rounded-lg shadow-lg bg-[#3D3D3D] text-white"
+            >
+              <span className="w-12 h-12 bg-[#fecc00] rounded-full flex items-center justify-center shadow-[0px_4px_10px_2px_rgba(254,204,0,0.5)]">
+                <TbCube className="text-2xl" />
+              </span>
+              <span className="text-sm">
+                {service.price} - {service.amount}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</DrawerContent>
+
             </Drawer>
             <div className="flex flex-col gap-2 mt-2">
               <Label>User id</Label>
               <Input
                 className="px-3 py-2 bg-[#272727] border-none"
-                placeholder="000000000"
+                placeholder="00 00 00 00 00"
               ></Input>
             </div>
           </div>
