@@ -45,10 +45,10 @@ export function Service() {
               </DrawerTrigger>
               <DrawerContent className="bg-[#272727] text-white">
         <div className="h-full">
-       <DrawerHeader>
-        <DrawerTitle className="text-left">Service List</DrawerTitle>
+       <DrawerHeader className="p-6">
+        <DrawerTitle className="text-left text-2xl">Service List</DrawerTitle>
        </DrawerHeader>
-       <div className="p-10 pb-0 h-[calc(100vh-100px)] overflow-y-auto">
+       <div className="p-4 pb-0 h-[calc(100vh-100px)] overflow-y-auto">
       {/* Service List */}
       <div className="mt-3">
         <div className="grid grid-cols-2 gap-4">
