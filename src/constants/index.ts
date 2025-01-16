@@ -85,4 +85,7 @@ export const serviceList = [
 	{ id: 4, price: '48500 UZ', amount: '5 000 000' },
 	{ id: 5, price: '48500 UZ', amount: '5 000 000' },
 	{ id: 6, price: '48500 UZ', amount: '5 000 000' },
+	{ id: 7, price: '48500 UZ', amount: '5 000 000' },
+	{ id: 8, price: '48500 UZ', amount: '5 000 000' },
+	
 ]

@@ -25,7 +25,7 @@ export function Service() {
     navigate("/payment");
   };
   return (
-    <div className="w-full  mx-auto text-white min-h-screen relative">
+    <div className="w-full  mx-auto overflow-hidden text-white min-h-screen relative">
       <div className="bg-gradient-to-t from-[#000000] via-[#1e1e1ef0] to-[#272727d1] sm:px-10 p-3 min-h-screen overflow-hidden">
         <Navbar langs={false} type="back" />
         <div className="flex flex-col gap-8 items-center">
@@ -43,16 +43,16 @@ export function Service() {
                   <GoChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2" />
                 </div>
               </DrawerTrigger>
-              <DrawerContent className=" bg-[#272727] text-white">
-                <div className="mx-auto max-w-xl ">
+              <DrawerContent className=" bg-[#272727] text-white overflow-y-auto ">
+                <div className=" ">
                   <DrawerHeader>
                     <DrawerTitle className="text-left">
                       Service List{" "}
                     </DrawerTitle>
                   </DrawerHeader>
-                  <div className="p-4 pb-0">
+                  <div className="p-4 pb-0 ">
                     {/* Service List */}
-                    <div className="mt-3">
+                    <div className="mt-3" >
                       <div className="grid grid-cols-2 gap-4 ">
                         {serviceList.map((service) => (
                           <div
